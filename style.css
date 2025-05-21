@@ -1,0 +1,242 @@
+@font-face {
+  font-family: 'Ranade';
+  src: url('Ranade_Complete/Fonts/OTF/Ranade-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Ranade', sans-serif;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#header {
+    height: 120px;
+    background-color: #d8d8d8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+.logo {
+    width: 130px;
+    height: auto;
+    margin-left: 20px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+#navbar li a:hover {
+  color: #088178;
+}
+
+.icons {
+  display: flex;
+  gap: 25px;
+  transition: 0.3s ease;
+}
+
+.icons i {
+  color: black;
+  font-size: 1.5em;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+
+.icons i:hover {
+  color: #088178;
+  cursor: pointer;
+}
+
+/* Override Bootstrap's container padding and margins for the slider section */
+section.container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  max-width: 100% !important; /* Ensure it takes full width */
+}
+
+/* Ensure the slider wrapper inside the container also takes full width */
+section.container .slider-wrapper {
+  width: 100%;
+  margin: 0;
+}
+
+.slider-wrapper {
+  width: 100%;
+  height: 510px;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider img {
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.slider-nav {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 1;
+}
+
+.slider-nav .dot {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.slider-nav .dot.active {
+  background-color: white;
+}
+
+.slide {
+  width: 100vw;
+  flex-shrink: 0;
+}
+
+#slider {
+  display: flex;
+}
+
+.category-container {
+  padding: 20px 0;
+  background: linear-gradient(#eceffe, #ced6fb);
+  text-align: center;
+  position: relative; /* Ensure arrows are positioned relative to this */
+}
+
+.card-wrapper {
+  width: 94%; /* Tighter margins: 3% on each side */
+  margin: 0 auto; /* Center the container */
+  margin-bottom: 45px;
+}
+
+.card-item {
+  list-style: none;
+  width: 250px; /* Fixed width */
+  height: 350px; /* Fixed height */
+  margin-right: 20px; /* Fallback spacing */
+}
+
+.card-item .card-link {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 18px;
+  border-radius: 12px;
+  text-decoration: none;
+  border: 2px solid transparent;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease;
+  height: 100%; /* Ensure full height */
+}
+
+.card-item .card-link:hover {
+  border-color: #5372f0;
+}
+
+.card-item .card-image {
+  width: 100%;
+  height: 80%; /* 80% of 350px = 280px for image */
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-item .card-title {
+  font-size: 1.19rem;
+  color: #000;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px; /* Space between image and title */
+}
+
+/* Style for Swiper arrows */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #000; /* Visible color */
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+  z-index: 10;
+}
+
+.swiper-button-prev {
+  left: 10px; /* Position on the left */
+}
+
+.swiper-button-next {
+  right: 10px; /* Position on the right */
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.category-container .swiper-pagination {
+  position: absolute;
+  bottom: 23px;
+  width: 100%;
+  text-align: center;
+}
+
+.category-title{
+  font-size: xx-large;
+  margin-bottom: 10px;
+}
